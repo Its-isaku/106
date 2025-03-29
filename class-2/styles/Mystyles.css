@@ -21,30 +21,35 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    background-color: #f8f9fa;
+    color: #212529;
 }
 
 /*? Main */
-main{
-    display: flex;
-    font-family: 'Arial', sans-serif;
-    height: 100vh;
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
     padding: 20px;
-    gap: 2rem;
-    background-color: #f8f9fa;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /*? Dark Mode Button */
 #darkMode {
     border: none;
     background: none;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     cursor: pointer;
-    color: #212529;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
 }
 
 /*? Dark Mode Styles */
-body.dark-mode main {
+body.dark-mode {
     background-color: #212529;
+    color: #f8f9fa;
 }
 
 body.dark-mode #darkMode {
@@ -62,9 +67,9 @@ body.dark-mode #list h1 {
 }   
 
 body.dark-mode .list-group-item {
-    background-color: #495057;
+    background-color: #343a40;
+    border-color: #454d55;
     color: #f8f9fa;
-    border-color: #6c757d;  
 }
 
 body.dark-mode #form {
@@ -136,8 +141,9 @@ body.dark-mode #btnSave:hover {
 }
 
 .list-group-item {
-    margin-bottom: 1rem;
-    border-radius: 8px !important;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
 .list-group-item:hover {
@@ -184,6 +190,19 @@ body.dark-mode #btnSave:hover {
 }
 
 #btnSave:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#btnDelete {
+    width: 100%;
+    padding: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#btnDelete:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
